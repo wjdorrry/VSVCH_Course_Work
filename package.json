@@ -1,0 +1,19 @@
+{
+  "name": "catering-platform-course",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm --workspace server run dev\" \"npm --workspace client run dev\"",
+    "build": "npm --workspace client run build",
+    "start": "npm --workspace server run start",
+    "db:seed": "npm --workspace server run seed",
+    "db:check": "npm --workspace server run db:check"
+  },
+  "devDependencies": {
+    "concurrently": "9.1.0"
+  }
+}

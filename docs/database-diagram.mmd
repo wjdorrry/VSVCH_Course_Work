@@ -1,0 +1,17 @@
+erDiagram
+    ROLES ||--o{ USERS : has
+    USERS ||--o{ CATERING_REQUESTS : creates
+    EVENT_TYPES ||--o{ CATERING_REQUESTS : classifies
+    STATUSES ||--o{ CATERING_REQUESTS : tracks
+    CATEGORIES ||--o{ DISHES : contains
+    CATERING_REQUESTS ||--o{ REQUEST_ITEMS : includes
+    DISHES ||--o{ REQUEST_ITEMS : selected_as
+
+    ROLES { int id PK string name }
+    USERS { int id PK string name string email string password_hash string phone int role_id FK }
+    EVENT_TYPES { int id PK string name }
+    STATUSES { int id PK string name string label }
+    CATEGORIES { int id PK string name }
+    DISHES { int id PK string name decimal price_per_person boolean is_vegetarian int category_id FK }
+    CATERING_REQUESTS { int id PK date event_date int guests_count decimal estimated_total int user_id FK int event_type_id FK int status_id FK }
+    REQUEST_ITEMS { int id PK int quantity decimal unit_price int request_id FK int dish_id FK }

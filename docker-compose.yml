@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: catering_course_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: catering_platform
+      POSTGRES_USER: catering
+      POSTGRES_PASSWORD: catering
+    ports:
+      - "5432:5432"
+    volumes:
+      - catering_pg_data:/var/lib/postgresql/data
+
+volumes:
+  catering_pg_data:

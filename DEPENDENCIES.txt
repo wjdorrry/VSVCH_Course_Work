@@ -1,0 +1,22 @@
+Direct dependencies (pinned):
+
+package.json
+concurrently 9.1.0
+
+client/package.json
+react 18.3.1
+react-dom 18.3.1
+react-router-dom 6.28.0
+@vitejs/plugin-react 4.3.3
+vite 5.4.10
+
+server/package.json
+bcryptjs 2.4.3
+cors 2.8.5
+dotenv 16.4.5
+express 4.21.1
+jsonwebtoken 9.0.2
+pdfkit 0.15.0
+pg 8.13.1
+pg-hstore 2.3.4
+sequelize 6.37.5
