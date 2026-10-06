@@ -38,6 +38,32 @@ export default function HomePage() {
         </div>
       </section>
 
+            {/* Демонстрационный рекламный блок для модели распространения Adware */}
+      <section className="section container">
+        <div
+          style={{
+            padding: '24px',
+            border: '1px solid #ddd',
+            borderRadius: '18px',
+            background: '#fff',
+          }}
+        >
+          <span className="eyebrow">Реклама</span>
+
+          <h2 style={{ marginTop: '8px', marginBottom: '10px' }}>
+            Всё для вашего мероприятия в одном месте
+          </h2>
+
+          <p style={{ marginBottom: '16px' }}>
+            Аренда мебели, декор, доставка напитков и другие услуги для организации вашего события.
+          </p>
+
+          <button className="btn btn-outline" type="button">
+            Подробнее
+          </button>
+        </div>
+      </section>
+
       <section className="section container">
         <SectionTitle centered eyebrow="Популярное" title="Блюда для фуршета" text="Небольшая подборка из каталога. Полное меню доступно на отдельной странице." />
         {loading ? <LoadingSpinner /> : <div className="dish-grid">{dishes.slice(0, 4).map((dish) => <DishCard key={dish.id} dish={dish} onAdd={user?.role === 'CLIENT' ? addDish : undefined} />)}</div>}
